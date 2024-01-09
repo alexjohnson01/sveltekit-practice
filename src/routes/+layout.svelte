@@ -21,3 +21,67 @@
 	<slot />
 </main>
 <PrismicPreview {repositoryName} />
+
+<style>
+	 @import "open-props/style";
+	 @import "open-props/normalize";
+	 @import "open-props/gray-hsl";
+
+	 @font-face {
+		font-family: "Anton";
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: swap;
+		src: local(""), url("/Anton-Regular.ttf") format("woff2");
+		unicode-range: U-28-7E, U+E4, U+E5, U+F6;
+	 }
+
+	 :root {
+		--brand: var(--red-6);
+		--text-1: var(--gray-9);
+		--text2: var(--gray-11);
+		--surface-1: var(--gray-3);
+		--surface-2: var(--indigo-2);
+		--surface-3: var(--gray-2);
+		--surface-4: var(--orange-4);
+		--surface-shadow: var(--gray-8-hsl);
+		--surface-strength: 2%
+	 }
+
+	 @media (prefers-color-scheme: dark) {
+		:root {
+			color-scheme: dark;
+
+			--brand: var(--orange-10);
+			--text-1: var(--gray-3);
+			--text2: var(--gray-2);
+			--surface-1: var(--gray-9);
+			--surface-2: var(--gray-10);
+			--surface-3: var(--purple-12);
+			--surface-4: var(--violet-11);
+			--surface-shadow: var(--gray-11-hsl);
+			--surface-strength: 50%
+		}
+	 }
+
+	 :global(html) {
+		--fonr-serif: "Anton";
+		font-family: var(--font-sans);
+	 }
+
+	 :global(section) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--size-10);
+		padding: var(--size-11) 0;
+	 }
+
+	 :global(section:nth-child(even)) {
+		background: var(--surface-1);
+	 }
+
+	 :global(section:nth-child(odd)) {
+		background: var(--surface-4);
+	 }
+</style>

@@ -34,6 +34,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prismicio/client": "^7.3.1",
-		"@prismicio/svelte": "^1.0.3"
+		"@prismicio/svelte": "^1.0.3",
+		"open-props": "^1.6.17"
 	}
 }
